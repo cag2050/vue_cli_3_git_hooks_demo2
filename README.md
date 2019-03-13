@@ -1,3 +1,8 @@
+### vue-cli 3 安装选项:
+1. Babel, Router(history mode), Vuex, CSS Pre-processors(Less), Linter(Prettier、lint on save), placing config(In dedicated config files)
+
+
+
 # vue_cli_3_git_hooks_demo2
 
 ## Project setup
