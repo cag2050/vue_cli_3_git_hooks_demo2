@@ -17,12 +17,16 @@
 ```
 3. 添加文件：.lintstagedrc、commitlint.config.js。
 
-### vue cli 3 查看项目 vue.config.js 的默认配置信息
-1. 运行命令，在终端输出：
-```npx vue-cli-service inspect```
-2. 运行命令，将输出导入到文件：`vue.config.detail.js`：
-```npx vue-cli-service inspect >> vue.config.detail.js```
-3. 在文件：`vue.config.detail.js` 开头，添加：`module.exports = `，然后格式化即可查看。
+### 使用 `vue-cli-service inspect` 来查看一个 Vue CLI 3 项目的 webpack 配置信息（包括：development、production）
+1. --mode 指定环境模式 (默认值：development)
+2. 运行命令，在终端输出：
+开发环境：```npx vue-cli-service inspect --mode development```
+生产环境：```npx vue-cli-service inspect --mode production```
+3. 运行命令，将输出导入到 js 文件：
+开发环境：```npx vue-cli-service inspect --mode development >> webpack.config.development.js```
+生产环境：```npx vue-cli-service inspect --mode production >> webpack.config.production.js```
+4. 在产生的 js 文件开头，添加：`module.exports = `，然后格式化即可查看。
+5. 官方说明网址：https://cli.vuejs.org/zh/guide/cli-service.html#vue-cli-service-inspect
 
 ### .lintstagedrc 配置
 `prettier-eslint --write`含义：
